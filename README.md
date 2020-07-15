@@ -27,8 +27,8 @@ cout << "token:" << token << endl;
 
 **参数说明**
 
-* `authKey`  认证公钥，平台方法，例如 `WbykCN****8pwd3`
-*  `secretKey` 认证秘钥，是平台发放，例如 `23423****dfsfs`
+* `authKey`  认证公钥，平台发放，例如 `WbykCN****8pwd3`
+* `secretKey` 认证秘钥，是平台发放，可以修改，例如 `23423****dfsfs`
 * `channelName` 是要加入的频道名称，例如 `1234567****shao`
 * `userId` 是用户的 `id`，例如 `159****91766-10**26`
 * `expireTime` 是过期的时间，如果传 `0` 有效期将会是 24 小时，该时间戳为秒级时间戳，例如 `1594704891`
