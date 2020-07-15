@@ -17,7 +17,7 @@ string Client::getToken(const string &channelName, const string &userId, int exp
 
     string tokenJson = "{\"token\":\"" + secToken + "\",\"timestamp\":" + std::to_string(expireTime) + "}";
 
-    return base64EncodeString(tokenJson);
+    return base64EncodeString(tokenJson) + rand_str(16);
 }
 
 Client::Client(string authKey, string secretKey) {
@@ -69,4 +69,26 @@ std::string base64EncodeString(const std::string &strString) {
     }
 
     return pszEncode;
+}
+
+std::string rand_str(const int len) {
+    std::string str;
+    srand(time(nullptr));
+    int i;
+
+    for (i = 0; i < len; ++i) {
+        switch ((rand() % 3)) {
+            case 1:
+                str += 'A' + rand() % 26;
+                break;
+            case 2:
+                str += 'a' + rand() % 26;
+                break;
+            default:
+                str += '0' + rand() % 10;
+                break;
+        }
+    }
+
+    return str;
 }
