@@ -6,7 +6,7 @@
 
 ## 文档 
 
-[API文档 - Token生成](http://apidoc.roadofcloud.net/#/token)
+[API文档 - Token生成](http://apidoc.vclass.wangsu.com/#/token)
 
 ## 安装
 
